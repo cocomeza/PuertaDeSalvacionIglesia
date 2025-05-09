@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Puerta de Salvación</title>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap desde CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- AOS CSS for animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Archivo CSS personalizado -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .contact-page .hero-image {
+            height: 50vh;
+        }
+
+        .contact-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 30px;
+            position: relative;
+        }
+
+        .contact-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1000 100" xmlns="http://www.w3.org/2000/svg"><path d="M0,0v100h1000V0C666.7,66.7,333.3,66.7,0,0z" fill="white"/></svg>') no-repeat center bottom;
+            background-size: cover;
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--primary-light);
+        }
+
+        .contact-info a {
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--primary-dark);
+            text-decoration: none;
+        }
+
+        .staff-section .card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: 100%;
+        }
+
+        .staff-section .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .staff-img {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .staff-social a {
+            color: var(--secondary-color);
+            margin: 0 8px;
+            transition: all 0.3s ease;
+        }
+
+        .staff-social a:hover {
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+
+<body class="contact-page">
+    <!-- Navbar responsivo -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-church me-2"></i>Puerta de Salvación
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i>
+                            Inicio</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            <i class="fas fa-book-bible me-1"></i> Biblia y Fe
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="biblia.html">Biblia Online</a></li>
+                            <li><a class="dropdown-item" href="sermones.html">Sermones</a></li>
+                            <li><a class="dropdown-item" href="estudios.html">Estudios Bíblicos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="actividades.html"><i
+                                class="fas fa-calendar-alt me-1"></i> Actividades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galeria.html"><i class="fas fa-images me-1"></i>
+                            Galería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="testimonios.html"><i class="fas fa-pray me-1"></i>
+                            Testimonios</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contacto.html"><i
+                                class="fas fa-envelope me-1"></i> Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-primary donate-btn" href="donaciones.html"><i
+                                class="fas fa-hand-holding-heart me-1"></i> Donar</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-image">
+        <img src="https://images.pexels.com/photos/7103/writing-notes-idea-conference.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="Contacto" class="img-fluid w-100">
+    </section>
+
+    <!-- Información de contacto -->
+    <section class="container mt-5" data-aos="fade-up">
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="contact-card h-100">
+                    <div class="contact-header text-center">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Ubicación</h3>
+                    </div>
+                    <div class="card-body contact-info text-center p-4">
+                        <div class="map-container text-center mt-3">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3326.893361880973!2d-60.066429525454026!3d-33.50415147336825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b9e37b836b12c9%3A0x508cbcde516c36d5!2s24%20de%20Octubre%20673%2C%20B2914%20Villa%20Ramallo%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1746751076368!5m2!1ses-419!2sar"
+                                width="100%" height="300" style="border:0;" allowfullscreen=""
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="contact-card h-100">
+                    <div class="contact-header text-center">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Teléfono</h3>
+                    </div>
+                    <div class="card-body contact-info text-center p-4">
+                        <p>Oficina de la Iglesia:</p>
+                        <p><a href="tel:+1234567890">(123) 456-7890</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="contact-card h-100">
+                    <div class="contact-header text-center">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                    </div>
+                    <div class="card-body contact-info text-center p-4">
+                        <p>Información General:</p>
+                        <p><a href="mailto:info@puertadesalvacion.org">info@puertadesalvacion.org</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de contacto -->
+    <section class="container my-5" data-aos="fade-up">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow">
+                    <div class="card-body p-5">
+                        <h2 class="text-center mb-4">Envíanos un mensaje</h2>
+                        <form id="contact-form">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Teléfono</label>
+                                <input type="tel" class="form-control" id="phone">
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Asunto</label>
+                                <select class="form-select" id="subject" required>
+                                    <option value="" selected disabled>Selecciona una opción</option>
+                                    <option value="general">Información General</option>
+                                    <option value="prayer">Petición de Oración</option>
+                                    <option value="event">Información sobre Eventos</option>
+                                    <option value="volunteer">Voluntariado</option>
+                                    <option value="other">Otro</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane me-1"></i> Enviar Mensaje
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nuestro Equipo -->
+    <section class="staff-section container my-5" data-aos="fade-up">
+        <div class="section-header text-center mb-4">
+            <h2><i class="fas fa-users me-2"></i>Nuestro Equipo</h2>
+            <p>Conozca a las personas que sirven en nuestra iglesia</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://i.postimg.cc/JnkyY9W8/pastora.png" class="card-img-top staff-img"
+                        alt="Marianela Menchini">
+                    <div class="card-body text-center">
+                        <h4> Marianela Menchini</h4>
+                        <p class="text-secondary">Pastora</p>
+                        <p class="card-text">Sirviendo a la comunidad con más de 15 años de experiencia en el ministerio
+                            y guiando a la congregación con sabiduría y compasión.</p>
+                        <div class="staff-social mt-3">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://i.postimg.cc/6p3gy1qB/sandra.png?auto=compress&cs=tinysrgb&w=800"
+                        class="card-img-top staff-img" alt="Sandra Ramech">
+                    <div class="card-body text-center">
+                        <h4>Sandra Ramech</h4>
+                        <p class="text-secondary">Directora del Coro</p>
+                        <p class="card-text">Lidera nuestro equipo de adoración con talento y pasión.</p>
+                        <div class="staff-social mt-3">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://i.postimg.cc/zXRR8qSN/mary.png"
+                        class="card-img-top staff-img" alt="Mary Franco">
+                    <div class="card-body text-center">
+                        <h4>Mary Franco</h4>
+                        <p class="text-secondary">Musica</p>
+                        <p class="card-text">Guía a nuestros jóvenes en su camino espiritual, organizando actividades y
+                            estudios bíblicos adaptados a su edad.</p>
+                        <div class="staff-social mt-3">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Horarios de Servicio -->
+    <section class="container my-5 py-5 bg-light rounded" data-aos="fade-up">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="mb-4"><i class="fas fa-clock me-2"></i>Horarios de Servicio</h2>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="table-primary">
+                            <tr>
+                                <th>Día</th>
+                                <th>Servicio</th>
+                                <th>Horario</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lunes</td>
+                                <td>Estudio Biblico</td>
+                                <td>15:30 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Martes</td>
+                                <td>Reunion General</td>
+                                <td>19:30 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Sabados</td>
+                                <td>Reunion General</td>
+                                <td>19:30 PM</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preguntas Frecuentes -->
+    <section class="container my-5" data-aos="fade-up">
+        <div class="section-header text-center mb-4">
+            <h2><i class="fas fa-question-circle me-2"></i>Preguntas Frecuentes</h2>
+            <p>Respuestas a algunas preguntas comunes</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                ¿Cómo puedo unirme a la iglesia?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Para unirse a nuestra iglesia, simplemente asista y venga a compartir la palabra de
+                                Dios. ¡Será muy bienvenido/a!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                ¿Qué debo vestir para los servicios?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                No hay un código de vestimenta estricto. Lo importante es que te sientas cómodo/a y
+                                vengas con un corazón dispuesto.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                ¿Cómo puedo recibir apoyo en momentos difíciles?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Si atravesás un momento difícil, nuestros líderes y pastores están disponibles para
+                                brindarte apoyo y oración. No dudes en contactarnos.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                ¿Cómo puedo ser voluntario en la iglesia?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Podés hablar con alguno de nuestros líderes o enviar un mensaje desde el formulario de
+                                contacto. ¡Siempre estamos agradecidos por nuevas manos que quieran servir!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                ¿Se puede donar a la iglesia?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Sí, si querés colaborar con nuestra misión, podés hacerlo a través de nuestras opciones
+                                de donación. ¡Toda ayuda es bien recibida!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/123456789" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Pie de página -->
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4>Puerta de Salvación</h4>
+                    <p>Un lugar para crecer espiritualmente y compartir en comunidad.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/tu-pagina" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/tu-pagina" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="actividades.html">Actividades</a></li>
+                        <li><a href="sermones.html">Sermones</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Boletín Informativo</h4>
+                    <p>Suscríbete para recibir noticias y actualizaciones.</p>
+                    <form id="newsletter-form">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Tu email" required>
+                            <button class="btn btn-primary" type="submit">Suscribirse</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-bottom text-center">
+                <p>Creado por <strong>BotonCreativo</strong> | &copy; 2025 Puerta de Salvación. Todos los derechos
+                    reservados.</p>
+                <div class="developer-info">
+                    <p>Desarrollado por:</p>
+                    <div class="social-icons d-flex justify-content-center gap-3">
+                        <a href="https://www.linkedin.com/in/maxi-meza" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/cocomeza" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Ir arriba botón -->
+    <button id="scrollToTop" class="scroll-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Script personalizado -->
+    <script src="app.js"></script>
+    <script>
+        // Script específico para la página de contacto
+        document.addEventListener('DOMContentLoaded', function () {
+            // Manejar el envío del formulario de contacto
+            const contactForm = document.getElementById('contact-form');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', function (event) {
+                    event.preventDefault();
+
+                    // Obtener los valores del formulario
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const phone = document.getElementById('phone').value;
+                    const subject = document.getElementById('subject').value;
+                    const message = document.getElementById('message').value;
+
+                    // Aquí se podrían enviar los datos a un servidor
+                    // Por ahora, mostraremos un mensaje de confirmación
+
+                    const alertDiv = document.createElement('div');
+                    alertDiv.className = 'alert alert-success alert-dismissible fade show mt-3';
+                    alertDiv.role = 'alert';
+
+                    alertDiv.innerHTML = `
+                        <strong>¡Gracias ${name}!</strong> Tu mensaje ha sido enviado correctamente. Nos pondremos en contacto contigo pronto.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    `;
+
+                    contactForm.parentNode.insertBefore(alertDiv, contactForm);
+
+                    // Reiniciar el formulario
+                    contactForm.reset();
+
+                    // Eliminar la alerta después de 5 segundos
+                    setTimeout(function () {
+                        alertDiv.remove();
+                    }, 5000);
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
