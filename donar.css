@@ -1,0 +1,35 @@
+@import url('styles.css'); /* Importa los estilos generales */
+
+/* Estilo para la sección de donaciones */
+.donar-section {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+    background: var(--bg-light);
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.donar-section h1 {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.donar-section p {
+    font-size: 1.2rem;
+}
+
+.donacion-datos {
+    background-color: var(--primary-light);
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dato p {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
