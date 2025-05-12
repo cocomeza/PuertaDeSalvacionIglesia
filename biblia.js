@@ -84,7 +84,7 @@ const libros = [
   "1_juan",
   "2_juan",
   "3_juan",
-  "juda",
+  "judas",
   "apocalipsis"
 ];
 
