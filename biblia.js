@@ -3,8 +3,90 @@
 const libroSelect = document.getElementById('libro');
 const resultadoDiv = document.getElementById('resultado');
 
-// Lista de libros disponibles (debe coincidir con los archivos en la carpeta /biblia)
-const libros = ["genesis", "exodo", "mateo", "marcos", "lucas", "juan", "hechos"];
+const libros = [
+  // Pentateuco
+  "genesis",
+  "exodo",
+  "levitico",
+  "numeros",
+  "deuteronomio",
+
+  // Libros históricos
+  "josue",
+  "jueces",
+  "rut",
+  "1_samuel",
+  "2_samuel",
+  "1_reyes",
+  "2_reyes",
+  "1_cronicas",
+  "2_cronicas",
+  "esdras",
+  "nehemias",
+  "ester",
+
+  // Libros poéticos y sapienciales
+  "job",
+  "salmos",
+  "proverbios",
+  "ecclesiastes",
+  "cantares",
+
+  // Profetas mayores y menores
+  "isaias",
+  "jeremias",
+  "lamentaciones",
+  "ezequiel",
+  "daniel",
+  "oseas",
+  "joel",
+  "amos",
+  "abdias",
+  "jonas",
+  "miqueas",
+  "nahum",
+  "habacuc",
+  "sofonias",
+  "hageo",
+  "zacarias",
+  "malaquias",
+
+  // Nuevo Testamento
+  // Evangelios
+  "mateo",
+  "marcos",
+  "lucas",
+  "juan",
+
+  // Historia
+  "hechos",
+
+  // Cartas de Pablo
+  "romanos",
+  "1_corintios",
+  "2_corintios",
+  "galatas",
+  "efesios",
+  "filipenses",
+  "colosenses",
+  "1_tesalonicenses",
+  "2_tesalonicenses",
+  "1_timoteo",
+  "2_timoteo",
+  "tito",
+  "filemon",
+
+  // Otras cartas y Apocalipsis
+  "hebreos",
+  "santiago",
+  "1_pedro",
+  "2_pedro",
+  "1_juan",
+  "2_juan",
+  "3_juan",
+  "juda",
+  "apocalipsis"
+];
 
 // Función para cargar los libros en el select
 function cargarLibros() {
