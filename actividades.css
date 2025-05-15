@@ -1,0 +1,98 @@
+@import url('styles.css');
+
+/* Ajuste para reducir espacio entre secciones */
+.container.espacio-reducido {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+/* Ajustar márgenes internos para evitar espacios acumulados */
+.container.espacio-reducido h2,
+.container.espacio-reducido p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Tarjetas de actividades */
+.card {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.card-text {
+    color: var(--text-dark);
+    font-size: 1rem;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--bg-dark);
+    color: white;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icons a img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 180px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-text {
+        font-size: 0.95rem;
+    }
+}
