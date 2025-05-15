@@ -15,6 +15,27 @@
     margin-bottom: 0.5rem;
 }
 
+/* Márgenes laterales generales para contenedores */
+.container {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* Márgenes laterales específicos para el Proyecto de Huerta */
+.proyecto-huerta {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* Ajustes responsivos para móviles (pantallas ≤ 576px) */
+@media (max-width: 576px) {
+    .container,
+    .proyecto-huerta {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
 /* Tarjetas de actividades */
 .card {
     border: none;
