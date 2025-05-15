@@ -17,14 +17,14 @@
 
 /* Márgenes laterales generales para contenedores */
 .container {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 /* Márgenes laterales específicos para el Proyecto de Huerta */
 .proyecto-huerta {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 /* Ajustes responsivos para móviles (pantallas ≤ 576px) */
